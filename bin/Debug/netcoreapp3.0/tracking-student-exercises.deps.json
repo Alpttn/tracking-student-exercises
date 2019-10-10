@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "tracking-student-exercises/1.0.0": {
+        "runtime": {
+          "tracking-student-exercises.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "tracking-student-exercises/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

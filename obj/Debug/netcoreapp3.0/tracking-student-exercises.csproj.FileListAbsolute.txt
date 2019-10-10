@@ -1,0 +1,11 @@
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.exe
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.deps.json
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.runtimeconfig.json
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.runtimeconfig.dev.json
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.dll
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\bin\Debug\netcoreapp3.0\tracking-student-exercises.pdb
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\obj\Debug\netcoreapp3.0\tracking-student-exercises.csprojAssemblyReference.cache
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\obj\Debug\netcoreapp3.0\tracking-student-exercises.AssemblyInfoInputs.cache
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\obj\Debug\netcoreapp3.0\tracking-student-exercises.AssemblyInfo.cs
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\obj\Debug\netcoreapp3.0\tracking-student-exercises.dll
+C:\Users\allis\workspace\CSharp\book1\exercises\tracking-student-exercises\obj\Debug\netcoreapp3.0\tracking-student-exercises.pdb
