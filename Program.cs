@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 
 namespace tracking_student_exercises
 {
@@ -43,41 +43,50 @@ namespace tracking_student_exercises
             Cohort35.InstructorList.Add(instructor2);
             Cohort36.InstructorList.Add(instructor3);
 
-            foreach (Instructor instructor in Cohort34.InstructorList)
-            {
-                foreach (Student student in Cohort34.StudentList)
-                {
-                    instructor.assignExercise(student, exercise1);
-                    instructor.assignExercise(student, exercise2);
-                }
-            }
-            
-            foreach (Instructor instructor in Cohort35.InstructorList)
-            {
-                foreach (Student student in Cohort35.StudentList)
-                {
-                    instructor.assignExercise(student, exercise3);
-                    instructor.assignExercise(student, exercise4);
-                }
-            }
+            List<Cohort> cohortList = new List<Cohort>();
+            cohortList.Add(Cohort34);
+            cohortList.Add(Cohort35);
+            cohortList.Add(Cohort36);
 
-            foreach (Instructor instructor in Cohort36.InstructorList)
+            foreach (Cohort cohort in cohortList) //for each cohort in the cohort list do something
             {
-                foreach (Student student in Cohort36.StudentList)
+                Instructor anInstructor = cohort.InstructorList.First(); //give me an instructor from the list doesn't matter which one aka .First from linq
+                foreach (Student student in cohort.StudentList)
                 {
-                    instructor.assignExercise(student, exercise1);
-                    instructor.assignExercise(student, exercise2);
+                    anInstructor.assignExercise(student, exercise1);
+                    anInstructor.assignExercise(student, exercise2);
                 }
+
             }
 
 
-            //foreach instructor {
 
-            // foreach student{
-            // invoke assignExercise(student1 exercise)
-            // invoke assignExercise(student1 DIFFEXercise)
+            //then did this way but didn't have DRY code. would have to do this for each cohort
+            // Instructor aCohort34Instructor = Cohort34.InstructorList.First();
+            // foreach (Student student in Cohort34.StudentList)
+            // {
+            //     aCohort34Instructor.assignExercise(student, exercise1);
+            //     aCohort34Instructor.assignExercise(student, exercise2);
             // }
 
+            // I was doing it this way but then every teacher would assign me 2 exercises
+
+            // foreach (Instructor instructor in Cohort35.InstructorList)
+            // {
+            //     foreach (Student student in Cohort35.StudentList)
+            //     {
+            //         instructor.assignExercise(student, exercise3);
+            //         instructor.assignExercise(student, exercise4);
+            //     }
+            // }
+
+            // foreach (Instructor instructor in Cohort36.InstructorList)
+            // {
+            //     foreach (Student student in Cohort36.StudentList)
+            //     {
+            //         instructor.assignExercise(student, exercise1);
+            //         instructor.assignExercise(student, exercise2);
+            //     }
             // }
 
         }
