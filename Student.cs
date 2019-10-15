@@ -8,7 +8,7 @@ namespace tracking_student_exercises {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string SlackHandle { get; set; }
-        public Cohort Cohort { get; set; }
+        public Cohort Cohort { get; set; } //it has an object that is a cohort
 
         //list of student exercises
         public List<Exercise> exerciseList { get; set; }
@@ -20,7 +20,7 @@ namespace tracking_student_exercises {
             LastName = lastName;
             SlackHandle = slackHandle;
             Cohort = cohort;
-            exerciseList = new List<Exercise>(); 
+            exerciseList = new List<Exercise>(); //this will instantiate it
         }
 
     }

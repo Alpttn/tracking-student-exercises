@@ -17,7 +17,7 @@ namespace tracking_student_exercises
             //create instances of exercises, cohorts, student, instructors
             Exercise exercise1 = new Exercise("Urban Planner", "JavaScript");
             Exercise exercise2 = new Exercise("Urban Planner II", "JavaScript");
-            Exercise exercise3 = new Exercise("List Employees", "JavaScript");
+            Exercise exercise3 = new Exercise("List Employees", "C#");
             Exercise exercise4 = new Exercise("Address Book", "JavaScript");
 
             Cohort Cohort34 = new Cohort("Cohort 34");
@@ -50,16 +50,52 @@ namespace tracking_student_exercises
 
             foreach (Cohort cohort in cohortList) //for each cohort in the cohort list do something
             {
-                Instructor anInstructor = cohort.InstructorList.First(); //give me an instructor from the list doesn't matter which one aka .First from linq
+                Instructor AnInstructor = cohort.InstructorList.First(); //give me an instructor from the list doesn't matter which one aka .First from linq
                 foreach (Student student in cohort.StudentList)
                 {
-                    anInstructor.assignExercise(student, exercise1);
-                    anInstructor.assignExercise(student, exercise2);
+                    AnInstructor.assignExercise(student, exercise1);
+                    AnInstructor.assignExercise(student, exercise2);
                 }
 
             }
 
+            List<Student> students = new List<Student>() {
+                student1,
+                student2,
+                student3,
+                student4
+            };
 
+            List<Exercise> exercises = new List<Exercise>() {
+                exercise1,
+                exercise2,
+                exercise3,
+                exercise4
+            };
+            List<Cohort> cohorts = new List<Cohort>() {
+                Cohort34,
+                Cohort35,
+                Cohort36,
+            };
+            List<Instructor> instructors = new List<Instructor>() {
+                instructor1,
+                instructor2,
+                instructor3,
+            };
+
+            List<Exercise> listOfJavaScriptExercises = exercises.Where(exercise => exercise.Language == "JavaScript").ToList();
+
+            foreach (Exercise exercise in listOfJavaScriptExercises)
+            {
+                Console.WriteLine(exercise.Name);
+            }
+
+            Console.WriteLine("----Students in cohort 34----");
+            List<Student> studentsOfCohort34 = students.Where(student => student.Cohort.Name == "Cohort 34").ToList();
+            foreach (Student student in studentsOfCohort34)
+            {
+                Console.WriteLine(student.FirstName);
+            }
 
             //then did this way but didn't have DRY code. would have to do this for each cohort
             // Instructor aCohort34Instructor = Cohort34.InstructorList.First();
