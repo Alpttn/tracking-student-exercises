@@ -83,19 +83,32 @@ namespace tracking_student_exercises
                 instructor3,
             };
 
+            // List exercises for the JavaScript language by using the Where() LINQ method.
             List<Exercise> listOfJavaScriptExercises = exercises.Where(exercise => exercise.Language == "JavaScript").ToList();
 
             foreach (Exercise exercise in listOfJavaScriptExercises)
             {
                 Console.WriteLine(exercise.Name);
             }
-
+            //List students in a particular cohort by using the Where() LINQ method.
             Console.WriteLine("----Students in cohort 34----");
             List<Student> studentsOfCohort34 = students.Where(student => student.Cohort.Name == "Cohort 34").ToList();
             foreach (Student student in studentsOfCohort34)
             {
                 Console.WriteLine(student.FirstName);
             }
+            Console.WriteLine("----Instructors in cohort 34----");
+            //List instructors in a particular cohort by using the Where() LINQ method.
+            List<Instructor> instructorsOfCohort34 = instructors.Where(instructor => instructor.Cohort.Name == "Cohort 34").ToList();
+            foreach (Instructor instructor in instructorsOfCohort34)
+            {
+                Console.WriteLine(instructor.FirstName);
+            }
+
+
+
+
+
 
             //then did this way but didn't have DRY code. would have to do this for each cohort
             // Instructor aCohort34Instructor = Cohort34.InstructorList.First();
@@ -126,7 +139,7 @@ namespace tracking_student_exercises
             // }
 
 
-           
+
 
         }
     }
