@@ -3,12 +3,8 @@ using System;
 namespace tracking_student_exercises
 {
 
-    public class Instructor
+    public class Instructor : NSSPerson
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string SlackHandle { get; set; }
-        public Cohort Cohort { get; set; }
         public string InstructorSpeciality { get; set; }
 
         public Instructor(string firstName, string lastName, string slackHandle, Cohort cohort, string instructorSpeciality)

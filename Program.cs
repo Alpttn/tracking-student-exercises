@@ -132,7 +132,7 @@ namespace tracking_student_exercises
 
             //How many students in each cohort?
             
-
+            cohorts.ForEach(cohort => Console.WriteLine($"{cohort.Name}: {cohort.StudentList.Count}"));
 
 
 

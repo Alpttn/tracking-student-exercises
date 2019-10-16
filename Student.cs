@@ -3,13 +3,8 @@ using System.Collections.Generic;
 
 
 namespace tracking_student_exercises {
-     public class Student
+     public class Student : NSSPerson
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string SlackHandle { get; set; }
-        public Cohort Cohort { get; set; } //it has an object that is a cohort
-
         //list of student exercises
         public List<Exercise> exerciseList { get; set; }
 
