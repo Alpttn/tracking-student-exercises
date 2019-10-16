@@ -25,13 +25,18 @@ namespace tracking_student_exercises
             Cohort Cohort36 = new Cohort("Cohort 36");
 
             Student student1 = new Student("Allie", "Patton", "alpttn", Cohort34);
-            Student student2 = new Student("Thomas", "Shelby", "peaky", Cohort34);
-            Student student3 = new Student("Arthur", "Shelby", "blinders", Cohort35);
-            Student student4 = new Student("John", "shelby", "order", Cohort36);
+            Student student2 = new Student("Thomas", "Shelby", "TheBest", Cohort34);
+            Student student3 = new Student("Arthur", "Shelby", "HelloArthur", Cohort35);
+            Student student4 = new Student("John", "shelby", "lilBro", Cohort36);
+            Student student5 = new Student("Polly", "Gray", "Gypsy", Cohort36); //student with no exercise
+
 
             Instructor instructor1 = new Instructor("Andy", "Collins", "askingALot", Cohort34, "pointing");
             Instructor instructor2 = new Instructor("Jenna", "Solis", "stuffedAnimal", Cohort35, "singing");
             Instructor instructor3 = new Instructor("Bryan", "Nielson", "highFive", Cohort36, "high fiving");
+
+            //assigning another exercise to Thomas Shelby
+            instructor1.assignExercise(student2, exercise3);
 
             //add instructors and students to each cohort list
             Cohort34.StudentList.Add(student1);
@@ -63,7 +68,8 @@ namespace tracking_student_exercises
                 student1,
                 student2,
                 student3,
-                student4
+                student4,
+                student5 //new student added
             };
 
             List<Exercise> exercises = new List<Exercise>() {
@@ -112,13 +118,22 @@ namespace tracking_student_exercises
                 Console.WriteLine(student.LastName);
             }
             //Display any students that aren't working on any exercises (Make sure one of your student instances don't have any exercises. Create a new student if you need to.)
+            Console.WriteLine("----students with no exercises----");
+            List<Student> studentsWithNoExercises = students.Where(student => student.exerciseList.Count == 0).ToList();
+
+            foreach (Student student in studentsWithNoExercises)
+            {
+                Console.WriteLine(student.FirstName);
+            }
 
             //Which student is working on the most exercises? Make sure one of your students has more exercises than the others.
+            Student studentWithMostExercises = students.OrderByDescending(student => student.exerciseList.Count()).First();//this takes the first one
 
 
             //How many students in each cohort?
             
-            
+
+
 
 
 
